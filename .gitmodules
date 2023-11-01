@@ -1,9 +1,9 @@
-[submodule "Godot-OpenXR-Startup"]
-	path = Godot-OpenXR-Startup
-	url = https://github.com/AyOhEe/Godot-OpenXR-Startup.git
-[submodule "Godot-VR-Body-Solver"]
-	path = Godot-VR-Body-Solver
-	url = https://github.com/AyOhEe/Godot-VR-Body-Solver.git
-[submodule "Newton"]
-	path = Newton
+[submodule "addons/Newton"]
+	path = addons/Newton
 	url = https://github.com/AyOhEe/Newton.git
+[submodule "addons/Godot-VR-Body-Solver"]
+	path = addons/Godot-VR-Body-Solver
+	url = https://github.com/AyOhEe/Godot-VR-Body-Solver.git
+[submodule "addons/Godot-OpenXR-Startup"]
+	path = addons/Godot-OpenXR-Startup
+	url = https://github.com/AyOhEe/Godot-OpenXR-Startup.git
