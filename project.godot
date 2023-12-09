@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="Newton"
-config/features=PackedStringArray("4.1", "Mobile")
+run/main_scene="res://Scenes/body_demo.tscn"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Newton"
 
+[physics]
+
+3d/physics_engine="JoltPhysics3D"
+
 [rendering]
 
 renderer/rendering_method="mobile"
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true
