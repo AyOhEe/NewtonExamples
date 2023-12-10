@@ -1,29 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://j45knrkum4pd"]
+[gd_scene load_steps=7 format=3 uid="uid://j45knrkum4pd"]
 
 [ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="1_ianie"]
 [ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="2_70bow"]
-[ext_resource type="PackedScene" uid="uid://cyb2l1vcms8n0" path="res://addons/Godot-OpenXR-Startup/OpenXR Startup/CameraRig.tscn" id="3_hpk2v"]
-[ext_resource type="PackedScene" uid="uid://bo3f3lg1xqgqb" path="res://addons/Godot-VR-Body-Solver/Scenes/PreparedBodySolver.tscn" id="4_h8wjc"]
-[ext_resource type="PackedScene" uid="uid://c8ccdoo0nk1uy" path="res://addons/Godot-VR-Body-Solver/Scenes/SkeletalAvatar.tscn" id="5_pr8ln"]
+[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_8a87h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai0cu"]
+albedo_color = Color(0.180392, 0.180392, 0.180392, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wwh7w"]
+material = SubResource("StandardMaterial3D_ai0cu")
 size = Vector3(10, 1, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8gry8"]
 data = PackedVector3Array(-5, 0.5, 5, 5, 0.5, 5, -5, -0.5, 5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, 0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, 5, 5, 0.5, -5, 5, -0.5, -5, 5, -0.5, 5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, 5, 5, 0.5, -5, -5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, 5, 5, -0.5, -5, -5, -0.5, -5)
-
-[sub_resource type="SphereMesh" id="SphereMesh_jj4w0"]
-radius = 0.25
-height = 0.5
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_lmjnj"]
-radius = 0.25
-
-[sub_resource type="BoxMesh" id="BoxMesh_8hf0b"]
-size = Vector3(0.32, 0.5, 0.2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gp6i1"]
-size = Vector3(0.32, 0.5, 0.2)
 
 [node name="Body Demo" type="Node3D"]
 
@@ -39,74 +28,9 @@ mesh = SubResource("BoxMesh_wwh7w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8gry8")
 
-[node name="NewtonPlayer" type="Node" parent="."]
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.597681, -0.225611, 0.769336, 0, 0.959589, 0.281404, -0.801734, 0.16819, -0.573529, 1.43915, 2.23616, -1.17213)
 
-[node name="CameraRig" parent="NewtonPlayer" instance=ExtResource("3_hpk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.708234)
+[node name="SubViewport" type="SubViewport" parent="."]
 
-[node name="SkeletalAvatar" parent="NewtonPlayer/CameraRig" node_paths=PackedStringArray("Solver") instance=ExtResource("5_pr8ln")]
-visible = false
-Solver = NodePath("../../BodySolver")
-
-[node name="Eyes" parent="NewtonPlayer/CameraRig/SkeletalAvatar" index="0"]
-visible = false
-
-[node name="BodySolver" parent="NewtonPlayer" node_paths=PackedStringArray("CameraRig") instance=ExtResource("4_h8wjc")]
-CameraRig = NodePath("../CameraRig")
-
-[node name="PhysicsRig" type="Node" parent="NewtonPlayer"]
-
-[node name="Locosphere" type="RigidBody3D" parent="NewtonPlayer/PhysicsRig"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24626, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NewtonPlayer/PhysicsRig/Locosphere"]
-mesh = SubResource("SphereMesh_jj4w0")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NewtonPlayer/PhysicsRig/Locosphere"]
-shape = SubResource("SphereShape3D_lmjnj")
-
-[node name="LegsJoint" type="Generic6DOFJoint3D" parent="NewtonPlayer/PhysicsRig/Locosphere"]
-node_a = NodePath("..")
-node_b = NodePath("../../Core")
-linear_limit_x/restitution = 1.0
-linear_limit_x/damping = 0.01
-linear_limit_y/upper_distance = 1.0
-linear_limit_y/lower_distance = 0.3
-linear_limit_z/restitution = 1.0
-linear_limit_z/damping = 0.01
-linear_spring_y/enabled = true
-linear_spring_y/equilibrium_point = 0.9
-
-[node name="Core" type="RigidBody3D" parent="NewtonPlayer/PhysicsRig"]
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NewtonPlayer/PhysicsRig/Core"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19297, 0)
-mesh = SubResource("BoxMesh_8hf0b")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NewtonPlayer/PhysicsRig/Core"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19297, 0)
-shape = SubResource("BoxShape3D_gp6i1")
-
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/Eyes"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/Neck"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/Chest"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/Spine"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/Body Direction"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LShoulder"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LElbow"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LWrist"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LHips"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LKnee"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LAnkle"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/LToe"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RShoulder"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RElbow"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RWrist"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RHips"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RKnee"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RAnkle"]
-[editable path="NewtonPlayer/CameraRig/SkeletalAvatar/RToe"]
+[node name="NewtonPlayer" parent="SubViewport" instance=ExtResource("3_8a87h")]
