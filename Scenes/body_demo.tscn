@@ -33,17 +33,17 @@ mesh = SubResource("BoxMesh_wwh7w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8gry8")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="DesktopCamera" type="Camera3D" parent="."]
 transform = Transform3D(-0.597625, 0, 0.801776, 0, 1, 0, -0.801776, 0, -0.597625, 2.56698, 1.68671, -2.01277)
 script = ExtResource("3_m8gpq")
 _XRotSpeed = -0.15
-_YRotSpeed = -0.1
+_YRotSpeed = -0.15
 _XRotRange = Vector2(-90, 90)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DesktopCamera"]
 mesh = SubResource("BoxMesh_jdmtn")
 
-[node name="Axis Helper" parent="Camera3D" instance=ExtResource("4_1n8kq")]
+[node name="Axis Helper" parent="DesktopCamera" instance=ExtResource("4_1n8kq")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="SubViewport" type="SubViewport" parent="."]
