@@ -82,7 +82,9 @@ public partial class CameraFly : Camera3D
 
     private void HandleRotation(float f_delta)
     {
-        _XRot = ClampedChange(_XRot, _MouseMotion.Y * f_delta * _XRotSpeed, _XRotRange.X, _XRotRange.Y);
+        float xmin = Mathf.DegToRad(_XRotRange.X);
+        float xmax = Mathf.DegToRad(_XRotRange.Y);
+        _XRot = ClampedChange(_XRot, _MouseMotion.Y * f_delta * _XRotSpeed, xmin, xmax);
         _YRot += _MouseMotion.X * f_delta * _YRotSpeed;
         _MouseMotion = Vector2.Zero;
         GlobalBasis = new Basis(Vector3.Up, _YRot) * new Basis(Vector3.Right, _XRot);
