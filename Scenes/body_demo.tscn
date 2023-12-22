@@ -1,20 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://j45knrkum4pd"]
+[gd_scene load_steps=8 format=3 uid="uid://j45knrkum4pd"]
 
 [ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="1_ianie"]
 [ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="2_70bow"]
 [ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_8a87h"]
 [ext_resource type="Script" path="res://Scripts/CameraFly.cs" id="3_m8gpq"]
 [ext_resource type="PackedScene" uid="uid://ta178svgkj7b" path="res://addons/Godot-Extras/Axis Helper/Axis Helper.tscn" id="4_1n8kq"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai0cu"]
-albedo_color = Color(0.180392, 0.180392, 0.180392, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_wwh7w"]
-material = SubResource("StandardMaterial3D_ai0cu")
-size = Vector3(10, 1, 10)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8gry8"]
-data = PackedVector3Array(-5, 0.5, 5, 5, 0.5, 5, -5, -0.5, 5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, 0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, 5, 5, 0.5, -5, 5, -0.5, -5, 5, -0.5, 5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, 5, 5, 0.5, -5, -5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, 5, 5, -0.5, -5, -5, -0.5, -5)
+[ext_resource type="PackedScene" uid="uid://wu181ildpr0i" path="res://Level Meshes/Body Demo/Body Demo.glb" id="6_td0mq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_jdmtn"]
 size = Vector3(0.2, 0.2, 0.4)
@@ -24,14 +15,6 @@ size = Vector3(0.2, 0.2, 0.4)
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_ianie")]
 
 [node name="DirectionalLight3D" parent="." instance=ExtResource("2_70bow")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_wwh7w")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_8gry8")
 
 [node name="DesktopCamera" type="Camera3D" parent="."]
 transform = Transform3D(-0.597625, 0, 0.801776, 0, 1, 0, -0.801776, 0, -0.597625, 2.56698, 1.68671, -2.01277)
@@ -49,3 +32,5 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 [node name="SubViewport" type="SubViewport" parent="."]
 
 [node name="NewtonPlayer" parent="SubViewport" instance=ExtResource("3_8a87h")]
+
+[node name="Body Demo" parent="." instance=ExtResource("6_td0mq")]
