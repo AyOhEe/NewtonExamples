@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbpuuwacrs5jg"]
+
+[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="1_ak822"]
+[ext_resource type="PackedScene" uid="uid://dnencpe4xgmeg" path="res://Level Meshes/Grim Reaper/Grim Reaper Level.blend" id="2_msam2"]
+[ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="3_jayjh"]
+
+[node name="GrimReaper" type="Node3D"]
+
+[node name="NewtonPlayer" parent="." instance=ExtResource("1_ak822")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0674701, 0, -1.68316)
+
+[node name="Grim Reaper Level" parent="." instance=ExtResource("2_msam2")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("3_jayjh")]
