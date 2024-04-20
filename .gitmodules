@@ -10,3 +10,9 @@
 [submodule "addons/Godot-Extras"]
 	path = addons/Godot-Extras
 	url = https://github.com/AyOhEe/Godot-Extras.git
+[submodule "addons/Godot-VR-UI"]
+	path = addons/Godot-VR-UI
+	url = https://github.com/AyOhEe/Godot-VR-UI.git
+[submodule "addons/Godot-VR-Measurements"]
+	path = addons/Godot-VR-Measurements
+	url = https://github.com/AyOhEe/Godot-VR-Measurements.git
