@@ -15,9 +15,17 @@ run/main_scene="res://Scenes/body_demo.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+VRUserMeasurements="*res://addons/Godot-VR-Measurements/scenes/VRUserMeasurements.tscn"
+
 [dotnet]
 
 project/assembly_name="Newton"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Godot-OpenXR-Startup/plugin.cfg", "res://addons/Godot-VR-Measurements/plugin.cfg", "res://addons/Godot-VR-UI/plugin.cfg")
 
 [filesystem]
 
