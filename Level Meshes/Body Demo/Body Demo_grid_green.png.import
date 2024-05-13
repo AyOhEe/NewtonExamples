@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://derpv784ay88k"
-path.s3tc="res://.godot/imported/Grid.001.png-71da7c930f143a51f245c372cb8e7c14.s3tc.ctex"
+uid="uid://df2excnrxiak4"
+path.s3tc="res://.godot/imported/Body Demo_grid_green.png-c0d6eae87099fd1b14e70c2c9fd16a04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "cf7d8dba9a15f6f332bbd4c6ff84598d"
+}
 
 [deps]
 
-source_file="res://Level Meshes/Body Demo/textures/Grid.001.png"
-dest_files=["res://.godot/imported/Grid.001.png-71da7c930f143a51f245c372cb8e7c14.s3tc.ctex"]
+source_file="res://Level Meshes/Body Demo/Body Demo_grid_green.png"
+dest_files=["res://.godot/imported/Body Demo_grid_green.png-c0d6eae87099fd1b14e70c2c9fd16a04.s3tc.ctex"]
 
 [params]
 

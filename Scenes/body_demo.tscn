@@ -237,7 +237,7 @@ script = ExtResource("8_eh0ej")
 _ActivationThreshold = 0.8
 
 [node name="Firepole" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021, 2, -1.338)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021, 2, -0.9)
 freeze = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Firepole"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://derpv784ay88k"
-path.s3tc="res://.godot/imported/Grid.001.png-71da7c930f143a51f245c372cb8e7c14.s3tc.ctex"
+uid="uid://d2ukgywfiaht2"
+path.s3tc="res://.godot/imported/grid_orange.bmp-c39a68187199fbd8a4463acce748aca9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Level Meshes/Body Demo/textures/Grid.001.png"
-dest_files=["res://.godot/imported/Grid.001.png-71da7c930f143a51f245c372cb8e7c14.s3tc.ctex"]
+source_file="res://Level Meshes/Body Demo/textures/grid_orange.bmp"
+dest_files=["res://.godot/imported/grid_orange.bmp-c39a68187199fbd8a4463acce748aca9.s3tc.ctex"]
 
 [params]
 
