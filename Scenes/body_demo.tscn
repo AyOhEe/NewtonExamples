@@ -104,55 +104,49 @@ materials = [ExtResource("9_58onh"), ExtResource("9_3e78c"), ExtResource("10_fq4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Box Prop"]
 shape = SubResource("BoxShape3D_3gp42")
 
-[node name="PlaneGrabbable" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable/Area3D" index="0"]
 shape = SubResource("BoxShape3D_soaa1")
 
-[node name="PlaneGrabbable2" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable2" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.2, 0)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable2/Area3D" index="0"]
 shape = SubResource("BoxShape3D_soaa1")
 
-[node name="PlaneGrabbable3" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable3" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.2)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable3/Area3D" index="0"]
 shape = SubResource("BoxShape3D_soaa1")
 
-[node name="PlaneGrabbable4" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable4" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.2)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable4/Area3D" index="0"]
 shape = SubResource("BoxShape3D_soaa1")
 
-[node name="PlaneGrabbable5" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable5" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 0, 1, -1, 4.37114e-08, -4.37114e-08, -0.2, 0, 0)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable5/Area3D" index="0"]
 shape = SubResource("BoxShape3D_soaa1")
 
-[node name="PlaneGrabbable6" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable6" parent="Box Prop" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 0, -1, -1, -4.37114e-08, -4.37114e-08, 0.2, 0, 0)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop/PlaneGrabbable6/Area3D" index="0"]
@@ -172,61 +166,55 @@ can_sleep = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Box Prop2"]
 shape = SubResource("BoxShape3D_knjfk")
 
-[node name="PlaneGrabbable" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable/Area3D" index="0"]
 shape = SubResource("BoxShape3D_1436j")
 
-[node name="PlaneGrabbable2" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable2" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.5, 0)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable2/Area3D" index="0"]
 shape = SubResource("BoxShape3D_1436j")
 
-[node name="PlaneGrabbable3" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable3" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.5)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable3/Area3D" index="0"]
 shape = SubResource("BoxShape3D_1436j")
 
-[node name="PlaneGrabbable4" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable4" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.5)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable4/Area3D" index="0"]
 shape = SubResource("BoxShape3D_1436j")
 
-[node name="PlaneGrabbable5" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable5" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 0, 1, -1, 4.37114e-08, -4.37114e-08, -0.5, 0, 0)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable5/Area3D" index="0"]
 shape = SubResource("BoxShape3D_1436j")
 
-[node name="PlaneGrabbable6" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody", "Tools") instance=ExtResource("7_mjdrm")]
+[node name="PlaneGrabbable6" parent="Box Prop2" node_paths=PackedStringArray("ParentRigidBody") instance=ExtResource("7_mjdrm")]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 0, -1, -1, -4.37114e-08, -4.37114e-08, 0.5, 0, 0)
 _Dimensions = Vector2(0.85, 0.85)
 ParentRigidBody = NodePath("..")
-Tools = [NodePath("../../Box Prop/Tool")]
 _DebugMode = false
 
 [node name="CollisionShape3D" parent="Box Prop2/PlaneGrabbable6/Area3D" index="0"]
