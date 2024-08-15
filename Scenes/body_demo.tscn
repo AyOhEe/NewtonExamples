@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="1_ianie"]
 [ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="2_70bow"]
-[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_8a87h"]
+[ext_resource type="PackedScene" uid="uid://wo8o1d8w2j4s" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_8a87h"]
 [ext_resource type="Script" path="res://Scripts/CameraFly.cs" id="3_m8gpq"]
 [ext_resource type="PackedScene" uid="uid://ta178svgkj7b" path="res://addons/Godot-Extras/Axis Helper/Axis Helper.tscn" id="4_1n8kq"]
 [ext_resource type="PackedScene" uid="uid://wu181ildpr0i" path="res://Level Meshes/Body Demo/Body Demo.glb" id="6_td0mq"]
@@ -91,6 +91,7 @@ ResolutionScale = 512
 
 [node name="Box Prop" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02143, 1, -3.00315)
+collision_mask = 3
 can_sleep = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Box Prop"]
@@ -158,6 +159,7 @@ _ActivationThreshold = 0.8
 
 [node name="Box Prop2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053681, 1, -3.00315)
+collision_mask = 3
 mass = 10.0
 can_sleep = false
 
@@ -263,6 +265,7 @@ shape = SubResource("BoxShape3D_f02ic")
 
 [node name="Ball" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62191, 0.651923, -3.16563)
+collision_mask = 3
 
 [node name="grid_ball" parent="Ball" instance=ExtResource("16_hgarr")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
