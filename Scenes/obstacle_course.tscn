@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://njve3qkkacgy" path="res://addons/Godot-Extras/Environments/WorldEnvironment.tscn" id="1_w65ds"]
 [ext_resource type="PackedScene" uid="uid://dwqd3nqutpp6t" path="res://addons/Godot-Extras/Environments/SceneLight.tscn" id="2_q3voq"]
-[ext_resource type="PackedScene" uid="uid://3716brh3f04n" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_k5jjt"]
+[ext_resource type="PackedScene" uid="uid://wo8o1d8w2j4s" path="res://addons/Newton/Scenes/newton_player.tscn" id="3_k5jjt"]
 [ext_resource type="PackedScene" uid="uid://cke1rsu1c814q" path="res://Level Meshes/Obstacle Course/Obstacle course.glb" id="4_88jei"]
 [ext_resource type="PackedScene" uid="uid://bedwkal2e0vis" path="res://addons/Newton/Scenes/Grabbables/plane_grabbable.tscn" id="5_e57gi"]
 [ext_resource type="PackedScene" uid="uid://idm2saafp1gy" path="res://addons/Newton/Scenes/Props/box.tscn" id="5_qouvw"]

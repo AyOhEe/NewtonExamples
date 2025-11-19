@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Newton"
 run/main_scene="res://Scenes/body_demo.tscn"
-config/features=PackedStringArray("4.3", "C#", "Mobile")
+config/features=PackedStringArray("4.5", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -74,7 +74,7 @@ cam_sprint={
 
 [physics]
 
-3d/physics_engine="JoltPhysics3D"
+3d/physics_engine="Jolt Physics"
 3d/solver/solver_iterations=24
 jolt_3d/collisions/areas_detect_static_bodies=true
 jolt_3d/solver/velocity_iterations=20
